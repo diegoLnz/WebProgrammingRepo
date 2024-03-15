@@ -3,7 +3,7 @@ html{
 }
 
 #logo{
-    width: 200px; /* Imposta una larghezza predefinita */
+    width: 200px;
     height: auto;
     transition: 0.3s ease-in-out;
 }
@@ -30,14 +30,16 @@ header {
     margin: 0px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100vw;
 }
 
 #options{
+    width: 200px;
     cursor: pointer;
     height: 100%;
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
@@ -82,9 +84,23 @@ nav{
     fill: aliceblue;
 }
 
+@media (max-width: 790px) {
+    header {
+        flex-direction: column;
+        height: auto;
+    }
 
-/*---*/
+    nav {
+        margin-top: 20px; 
+        order: 2;
+    }
+
+    #options {
+        order: 1;
+    }
+}
   
+/* COMMENTATE PERCHE' FACENTI PARTE DI UN VECCHIO LAYOUT
 .user-info{
     display: flex;
     max-width: 200px;
@@ -116,4 +132,4 @@ nav{
 #userlink{
     text-decoration: none;
     color: aliceblue;
-}
+}*/
