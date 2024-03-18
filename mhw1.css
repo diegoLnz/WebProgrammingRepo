@@ -4,6 +4,14 @@ body{
     overflow-y: auto;
 }
 
+.pointed{
+    cursor: pointer;
+}
+
+.hover-underlined:hover{
+    text-decoration: underline;
+}
+
 .radio-canada-normal {
     font-family: "Radio Canada", sans-serif;
     font-optical-sizing: auto;
@@ -56,6 +64,38 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.post-footer{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 20px;
+    color: #777;
+    font-size: small;
+    padding: 0px 10px;
+}
+
+.users-footer-images{
+    min-height: 20px;
+    min-width: 20px;
+    margin-right: 10px;
+}
+
+.user-footer-image{
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2),
+                0 0 2px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    min-height: auto;
+    min-width: auto;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    background-image: url("images/generic_user.png");
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
 }
 
 .actions-and-date{
@@ -132,6 +172,7 @@ header {
     margin: 10px 20px;
     color:#f3f5f7;
     padding: 0px 10px;
+    cursor: pointer;
 }
 
 .post-image img{
@@ -286,6 +327,10 @@ header {
 
 /*MEDIA QUERIES*/
 @media screen and (max-width: 730px) {
+
+    .content{
+        margin-bottom: 70px;
+    }
 
     #options {
         position: fixed;
