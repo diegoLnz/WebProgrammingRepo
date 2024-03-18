@@ -11,7 +11,7 @@ body{
     font-style: normal;
     font-variation-settings:
       "wdth" 100;
-  }
+}
 
 #logo{
     height: 70px;
@@ -89,13 +89,49 @@ header {
     background-color: rgb(30 30 30);
 }
 
+.start-thread{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.1px solid #343638;
+    padding-bottom: 15px;
+    width: 100%;
+    height: 40px;
+    min-height: 40px;
+    border-bottom: 0.1px solid #343638;
+}
+
+.start-thread-label{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #777777;
+    cursor: text;
+}
+
+.publish-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    border-radius: 50px;
+    background-color: #585858;
+    color: rgb(16 16 16);
+    font-weight: 500;
+    font-size: small;
+}
+
+.disabled{
+    cursor: not-allowed;
+}
+
 .post-content{
     border-left: 2px solid #343638;
     height: auto;
     width: 90%;
     margin: 10px 20px;
     color:#f3f5f7;
-    padding: 0px 10px 0px 10px;
+    padding: 0px 10px;
 }
 
 .post-image img{
@@ -128,6 +164,11 @@ header {
 
 .action-item:hover{
     background-color: rgb(30 30 30);
+}
+
+.start-thread + .single-post{
+    border-top: none;
+    margin-top: 15px;
 }
 
 .single-post + .single-post{
@@ -224,6 +265,7 @@ header {
     background-image: url("images/generic_user.png");
     background-size: cover;
     background-position: center;
+    cursor: pointer;
 }
 
 .main-username{
@@ -284,11 +326,15 @@ header {
         max-width: 100%;
     }
 
+    .start-thread{
+        display: none;
+    }
+
 }
 
 @media (min-width: 730px){
 
-    .single-post{
+    .single-post, .start-thread{
         width: 580px;
         min-width: 580px;
         max-width: 580px;
